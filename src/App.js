@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FormComponent from './Components/FormComponent';
 
 export default class App extends Component {
   render(){
@@ -8,7 +9,7 @@ export default class App extends Component {
     <div className='App'>
       
           Welcome to kidivity
-        
+        <FormComponent/>
     </div>
   );
   }
