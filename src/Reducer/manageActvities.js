@@ -1,1 +1,4 @@
-export default function manageActivites()
+export default function manageActivites(state= {
+    activites: []}, action){
+        return state
+    }
