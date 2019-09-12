@@ -10,14 +10,12 @@ export default class ActivityPageComponent extends Component{
         }
     }
     addItem = (name, address, description) => {
-      e.preventDefault();
         console.log ("got to addItem in activiies page")
     }
     render(){
         return (
             <div>
-                <FormComponent addItem={this.addItem}
-                    inputElement={this.inputElement}/>
+                <FormComponent addItem={this.addItem}/>
             </div>
         )
     }

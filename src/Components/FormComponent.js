@@ -26,14 +26,15 @@ export default class FormComponent extends Component{
         })
     }
 
-    handeOnSumbit = event => {
+    handeOnSubmit = event => {
+        event.preventDefault();
         this.props.addItem(this.state.name, this.state.address, this.state.description)
     }
 
     render (){
         return(
             <div>
-                <form onSubmit={this.props.addItem}>
+                <form onSubmit={this.handleOnSubmit}>
                     <input type="text" placeholder="name" onChange={this.handleNameChange}/>
                     <input type='text' placeholder="address" onChange={this.handleAddressChange}/>
                     <input type="text" placeholder="description" onChange={this.handleDescriptionChange}/>
