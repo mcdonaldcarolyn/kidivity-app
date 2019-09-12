@@ -6,7 +6,7 @@ export default class App extends Component {
   return (
     <div className='App'>
       
-          Welcome to kidivity
+         <h1> Welcome to Kidivity</h1>
         <ActivityPageComponent/>
     </div>
   );

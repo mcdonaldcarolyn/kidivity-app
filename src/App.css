@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.h1 {
+  color:  #441dad;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

@@ -19,6 +19,7 @@ export default class ActivityPageComponent extends Component{
         return (
             <div>
                 <ListComponent activities={this.state.activities}/>
+                <hr></hr>
                 <FormComponent addItem={this.addItem}/>
             </div>
         )

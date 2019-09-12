@@ -7,10 +7,8 @@ export default class ListComponent extends Component{
     renderActivities = () => {
         return this.props.activities.map(activity => {
             return (
-                <Activity key={activity.id}
-                activity={activity}>
-
-                </Activity>
+                <div key={activity.id}>{activity.name}<br></br>{activity.address}<br></br>{activity.description}</div>
+                
             )
         })
     }
@@ -18,7 +16,9 @@ export default class ListComponent extends Component{
     return(
     
     <div>
+        <li>
         {this.renderActivities()}
+        </li>
     </div>
 )
 }
