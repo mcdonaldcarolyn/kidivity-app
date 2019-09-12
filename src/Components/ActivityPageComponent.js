@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import FormComponent from "./FormComponent"
-import { thisExpression } from '@babel/types';
 
 export default class ActivityPageComponent extends Component{
     constructor(){
@@ -12,7 +11,7 @@ export default class ActivityPageComponent extends Component{
     addItem = (name, address, description) => {
         console.log ("got to addItem in activiies page")
     }
-    render(){
+    render() {
         return (
             <div>
                 <FormComponent addItem={this.addItem}/>
