@@ -9,6 +9,10 @@ export default class ActivityPageComponent extends Component{
             activities: []
         }
     }
+    addItem = e => {
+      e.preventDefault();
+        console.log ("got to addItem in activiies page")
+    }
     render(){
         return (
             <div>
