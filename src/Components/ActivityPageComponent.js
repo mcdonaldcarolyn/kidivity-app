@@ -5,18 +5,19 @@ import { thisExpression } from '@babel/types';
 export default class ActivityPageComponent extends Component{
     constructor(){
         super()
-        this.state ={
+        this.state = {
             activities: []
         }
     }
-    addItem = e => {
+    addItem = (name, address, description) => {
       e.preventDefault();
         console.log ("got to addItem in activiies page")
     }
     render(){
         return (
             <div>
-                <FormComponent addItem={this.addItem}/>
+                <FormComponent addItem={this.addItem}
+                    inputElement={this.inputElement}/>
             </div>
         )
     }
