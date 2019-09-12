@@ -11,12 +11,14 @@ export default class ActivityPageComponent extends Component{
     }
     addItem = (name, address, description) => {
         console.log ("got to addItem in activiies page")
-        
+        this.setState({
+            activities: [...this.state.activities, { name, address, description }]
+        })
     }
     render() {
         return (
             <div>
-                <ListComponent activites={this.state.activities}/>
+                <ListComponent activities={this.state.activities}/>
                 <FormComponent addItem={this.addItem}/>
             </div>
         )

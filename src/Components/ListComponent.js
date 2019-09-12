@@ -4,9 +4,22 @@ export default class ListComponent extends Component{
     state={
         activity: []
     }
+    renderActivities = () => {
+        return this.props.activities.map(activity => {
+            return (
+                <Activity key={activity.id}
+                activity={activity}>
+
+                </Activity>
+            )
+        })
+    }
     render(){
     return(
-    <h1>List Component </h1>
+    
+    <div>
+        {this.renderActivities()}
+    </div>
 )
 }
 }
