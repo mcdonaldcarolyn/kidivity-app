@@ -8,16 +8,19 @@ export default class FormComponent extends Component{
     };
 
     handleNameChange = event => {
+        event.preventDefault();
         this.setState({
             name: event.target.value
         })
     }
     handleAddressChange = event => {
+        event.preventDefault();
         this.setState({
             address: event.target.value
         })
     }
     handleDescriptionChange = event =>{
+        event.preventDefault();
         this.setState({
             description: event.target.value
         })
