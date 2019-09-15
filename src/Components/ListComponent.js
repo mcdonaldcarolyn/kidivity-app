@@ -13,13 +13,13 @@ export default class ListComponent extends Component{
         })
     }
     render(){
-    return(
-    
-    <div>
-        <li>
-        {this.renderActivities()}
-        </li>
-    </div>
-)
-}
+        return(
+        
+            <div>
+                <li>
+                {this.renderActivities()}
+                </li>
+            </div>
+        )
+    }
 }

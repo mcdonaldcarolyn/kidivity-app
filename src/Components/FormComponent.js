@@ -29,6 +29,12 @@ export default class FormComponent extends Component{
     handleOnSubmit = event => {
         event.preventDefault();
         this.props.addItem(this.state.name, this.state.address, this.state.description)
+        this.setState({
+            name: '',
+            address: '',
+            description: '',
+
+        })
     }
 
     render (){
