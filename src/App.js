@@ -11,9 +11,9 @@ export default class App extends Component {
       <div>
         <MenuComponent />
         <Router>
-          <Route exact path="/" component={ActivityPageComponent} />
-          <Route exact path="/home" component={HomePageComponent}/>
-          <Route exact path="/new" component={FormComponent}/>
+          <Route exact path="/list" component={ActivityPageComponent} />
+          <Route exact path="/" component={HomePageComponent}/>
+          {/* <Route exact path="/new" component={FormComponent}/> */}
         </Router>
       </div>
     );

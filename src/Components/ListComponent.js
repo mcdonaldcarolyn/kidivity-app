@@ -12,6 +12,7 @@ export default class ListComponent extends Component{
             )
         })
     }
+    
     render(){
         return(
         

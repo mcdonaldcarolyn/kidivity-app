@@ -9,10 +9,10 @@ export default class ActivityPageComponent extends Component {
             activities: []
         }
     }
-    addItem = (name, address, description) => {
+    addItem = (name, address, description, catagory) => {
         console.log ("got to addItem in activiies page")
         this.setState({
-            activities: [...this.state.activities, { name, address, description }]
+            activities: [...this.state.activities, { name, address, description, catagory }]
         })
     }
     render() {
