@@ -21,6 +21,7 @@ export default class ActivityPageComponent extends Component {
                 <ListComponent activities={this.state.activities}/>
                 <hr></hr>
                 <FormComponent addItem={this.addItem}/>
+                <a href="/"> Back to Home </a>
             </div>
         )
     }

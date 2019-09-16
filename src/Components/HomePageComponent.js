@@ -8,7 +8,7 @@ export default class HomePageComponent extends Component {
                 <br/>
                 <a href="/list">Go to activities</a>
                 <br/>
-                <a href="/new">Create a new Activity</a>
+                
 
                 
             </div>
