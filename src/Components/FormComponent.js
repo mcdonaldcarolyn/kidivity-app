@@ -5,7 +5,7 @@ export default class FormComponent extends Component{
         name: '',
         address: '',
         description: '', 
-        catagory:'',
+        category:'',
     };
 
     handleNameChange = event => {
@@ -26,21 +26,21 @@ export default class FormComponent extends Component{
             description: event.target.value
         })
     }
-    handleCatagoryChange = event =>{
+    handlecategoryChange = event =>{
         event.preventDefault();
         this.setState({
-            catagory: event.target.value
+            category: event.target.value
         })
     }
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addItem(this.state.name, this.state.address, this.state.description, this.state.catagory)
+        this.props.addItem(this.state.name, this.state.address, this.state.description, this.state.category)
         this.setState({
             name: '',
             address: '',
             description: '',
-            catagory: '',
+            category: '',
         })
     }
 
@@ -51,7 +51,7 @@ export default class FormComponent extends Component{
                     <input type="text" placeholder="name" onChange={this.handleNameChange}/>
                     <input type='text' placeholder="address" onChange={this.handleAddressChange}/>
                     <input type="text" placeholder="description" onChange={this.handleDescriptionChange}/>
-                    <select name="catagory" onChange={this.handleCatagoryChange}>
+                    <select name="category" onChange={this.handlecategoryChange}>
                         <option value="littles">littles</option>
                         <option value="bigger kids">bigger kids</option>
                         <option value="tween and older">tween and older</option>

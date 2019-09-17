@@ -6,8 +6,11 @@ export default class HomePageComponent extends Component {
             <div>
                 Welcome to Kidivity- Where you can create a master list of Kid acivities!
                 <br/>
-                <a href="/list">Go to activities</a>
+                <a href="/lists/littles">Littles List</a>
                 <br/>
+                <a href="/lists/biggerkids">Biggerkids</a>
+                <br/>
+                <a href="/lists/tweens">Tweens and Teens</a> 
                 
 
                 

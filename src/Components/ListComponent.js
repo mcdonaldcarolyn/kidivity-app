@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
-
+ 
 export default class ListComponent extends Component{
-    state={
-        activity: []
-    }
     renderActivities = () => {
-        return this.props.activities.map(activity => {
-            return (
-                <div key={activity.id}>{activity.name}<br></br>{activity.address}<br></br>{activity.description}</div>
-                
-            )
-        })
+        return this.props.activities
+            .filter(activity => activity.category === this.props.category)
+            .map((activity, idx) => {
+                return (
+                    <div key={idx}>{activity.name}<br></br>{activity.address}<br></br>{activity.description}</div>
+                    
+                )
+            });
     }
     
     render(){
@@ -18,7 +17,7 @@ export default class ListComponent extends Component{
         
             <div>
                 <li>
-                {this.renderActivities()}
+                <a href='/list/activity.id'>{this.renderActivities()}</a>
                 </li>
             </div>
         )
