@@ -13,6 +13,7 @@ export default class HomePageComponent extends Component {
                 <br/>
                 <a href="/lists/tweens">Tweens and Teens</a> 
                 <br/>
+                <a href="activites/new">add new activity</a>
                 
 
                 

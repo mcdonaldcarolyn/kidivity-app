@@ -22,7 +22,7 @@ export default class App extends Component {
                                                                    
           
           <Route exact path="/lists" component={ListsPageComponent} />
-          <Route exact path="/activities/new" component={FormComponent}></Route>
+          <Route exact path="/activities/new" component={FormPageComponent}/>
           
           <Route exact path="/lists/:id" component={ListPageComponent} />
 
