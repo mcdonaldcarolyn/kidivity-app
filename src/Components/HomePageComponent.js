@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import FormComponent from './FormComponent';
 
 export default class HomePageComponent extends Component {
     render() {
@@ -11,6 +12,7 @@ export default class HomePageComponent extends Component {
                 <a href="/lists/biggerkids">Biggerkids</a>
                 <br/>
                 <a href="/lists/tweens">Tweens and Teens</a> 
+                <br/>
                 
 
                 
