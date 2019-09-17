@@ -4,6 +4,7 @@ import ActivityPageComponent from'./Components/ActivityPageComponent';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MenuComponent from './Components/MenuComoponent';
 import HomePageComponent from './Components/HomePageComponent';
+import ListPageComponent from './Componets/ListPageComponent';
 export default class App extends Component {
   render(){
     return (
