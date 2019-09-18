@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
- import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-
+import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { categoties } from "../data/categories";
 
 
 export default class MenuComponent extends Component {
+  renderCategories(){
+    return categories.map((category, idx) => {
+      const url = "/categories/" + category.slug;
+      return (
+        <NavDropdown.Item key={idx} href={url}>
+          {category.name}
+          <NavDropdown.Item>
+      );
+   });
+  }
   render() {
     return (
       <Navbar bg="light" expand="lg">

@@ -4,9 +4,9 @@ import FormPageComponent from'./Components/FormPageComponent';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MenuComponent from './Components/MenuComoponent';
 import HomePageComponent from './Components/HomePageComponent';
-import ListPageComponent from './Components/ListPageComponent';
+import CategoryPageComponent from './Components/CategoryPageComponent';
 import ActivitiesPageComponent from './Components/ActivitiesPageComponent';
-import ListsPageComponent from './Components/ListPageComponent';
+import CategoriesPageComponent from './Components/CategoryPageComponent';
 import FormComponent from './Components/FormComponent';
 export default class App extends Component {
   render(){
@@ -15,23 +15,11 @@ export default class App extends Component {
         <MenuComponent />
         <Router>
           <Route exact path="/" component={HomePageComponent}/>
-          <Route exact path="/lists/:id" component={FormPageComponent} />
-          
-
-          
-                                                                   
-          
-          <Route exact path="/lists" component={ListsPageComponent} />
-          <Route exact path="/activities/new" component={FormPageComponent}/>
-          
-          <Route exact path="/lists/:id" component={ListPageComponent} />
-
-          
+          <Route exact path="/categories" component={CategoriesPageComponent} />
+          <Route exact path="/categories/:id" component={FormPageComponent} />
           <Route exact path="/activities" component={ActivitiesPageComponent} />
-
-          // show page for one specific activity; edit the values here; assign to lists
+          <Route exact path="/activities-new" component={FormPageComponent}/>
           <Route exact path="/activities/:id" component={FormPageComponent} />
-
         </Router>
       </div>
     );
