@@ -11,7 +11,7 @@ export default class MenuComponent extends Component {
       return (
         <NavDropdown.Item key={idx} href={url}>
           {category.name}
-          <NavDropdown.Item>
+          </NavDropdown.Item>
       );
    });
   }
@@ -23,10 +23,13 @@ export default class MenuComponent extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/list">List</Nav.Link>
+            <Nav.Link href="/list">Categories</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/list/littles">Littles List</NavDropdown.Item>
-              <NavDropdown.Item href="/list/biggerkids">Bigger kids</NavDropdown.Item>
+              {this.renderCategories()}
+              <NavDropdown.Divider />
+
+              <NavDropdown.Item href="/activities">View all Activities</NavDropdown.Item>
+              <NavDropdown.Item href="/activities-new">Add a new activity</NavDropdown.Item>
               <NavDropdown.Item href="/list/tweens">tweens and older</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
