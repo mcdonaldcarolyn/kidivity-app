@@ -6,17 +6,7 @@ export default class HomePageComponent extends Component {
         return (
             <div>
                 Welcome to Kidivity- Where you can create a master list of Kid acivities!
-                <br/>
-                <a href="/lists/littles">Littles List</a>
-                <br/>
-                <a href="/lists/biggerkids">Biggerkids</a>
-                <br/>
-                <a href="/lists/tweens">Tweens and Teens</a> 
-                <br/>
-                <a href="activites/new">add new activity</a>
-                
-
-                
+                <CategoryListComponent categories={categories}/>
             </div>
         )
     }
