@@ -2,5 +2,19 @@ import React, {Component } from "react";
 import { Link } from 'react-router-dom';
 
 export default class CategoryListComponent extends Component {
-    renderCategories
+    renderCategories = () => {
+        return this.props.categories.map(category =>{
+            const url = "/categories/" + category.slug;
+            return (
+                <li key={category.id}>
+                    <Link to={url}>{category.name}</Link>
+                </li>
+            );
+        })
+    }
+    render(){
+        return (
+            <ul>{this.renderCategories()}</ul>
+        )
+    }
 }
