@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import FormComponent from './FormComponent';
+import CategoryListComponent from './CategoryListComponent';
 
 export default class HomePageComponent extends Component {
     render() {
