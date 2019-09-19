@@ -3,11 +3,11 @@ import './App.css';
 import FormPageComponent from'./Components/FormPageComponent';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MenuComponent from './Components/MenuComoponent';
-import HomePageComponent from './Components/HomePageComponent';
-import CategoryPageComponent from './Components/CategoryPageComponent';
+import HomePageComponent from './container/HomePageComponent';
+import CategoryPageComponent from './container/CategoryPageComponent';
 import ActivitiesPageComponent from './Components/ActivitiesPageComponent';
-import CategoriesPageComponent from './Components/CategoryPageComponent';
-import FormComponent from './Components/FormComponent';
+import CategoriesPageComponent from './container/CategoryPageComponent';
+import FormComponent from './Components/ActivityFormComponent';
 export default class App extends Component {
   render(){
     return (

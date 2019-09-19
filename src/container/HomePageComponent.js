@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import FormComponent from './FormComponent';
-import CategoryListComponent from './CategoryListComponent'
-import {categories} from './data/categories';
+import FormComponent from '../Components/ActivityFormComponent';
+import CategoryListComponent from '../Components/CategoryListComponent'
+import {categories} from '../data/categories';
 export default class HomePageComponent extends Component {
     render() {
         return (
