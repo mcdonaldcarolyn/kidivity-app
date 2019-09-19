@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import FormPageComponent from'./Components/FormPageComponent';
+import FormPageComponent from'./container/FormPageComponent';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MenuComponent from './Components/MenuComoponent';
 import HomePageComponent from './container/HomePageComponent';

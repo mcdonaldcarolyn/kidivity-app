@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import FormComponent from "./ActivityFormComponent"
-import ListComponent from './ActivityListComponent';
+import FormComponent from "../Components/ActivityFormComponent"
+import ListComponent from '../Components/ActivityListComponent';
 
 export default class FormPageComponent extends Component {
     constructor(){
