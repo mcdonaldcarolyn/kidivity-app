@@ -9,6 +9,10 @@ export class ActivityPageComponent extends Component{
         const activity = this.props.activities.find(activity => activity.id === activityId);
         return (
             <div>
+                <h1>{activity.name}</h1>
+                <div>Category: {activity.category}</div>
+                <div>Address: {activity.address}</div>
+                <div>Description: {activity.description}</div>
                 
             </div>
         )
