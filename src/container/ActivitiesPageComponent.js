@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import FormComponent from "./FormComponent"
+import ActivityFormComponent from "../Components/ActivityFormComponent"
 import ListComponent from '../Components/ActivityListComponent';
 
 export default class ActivitiesPageComponent extends Component {
 render(){
     return (
-        <FormComponent/>
+        <ActivityFormComponent/>
     )
 }
 

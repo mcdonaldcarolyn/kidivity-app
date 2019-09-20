@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FormComponent from "../Components/ActivityFormComponent"
+import ActivityFormComponent from "../Components/ActivityFormComponent"
 import ListComponent from '../Components/ActivityListComponent';
 
 export default class FormPageComponent extends Component {
@@ -23,7 +23,7 @@ export default class FormPageComponent extends Component {
             <div>
                 <ListComponent category={id} activities={this.state.activities}/>
                 <hr></hr>
-                <FormComponent addItem={this.addItem}/>
+                <ActivityFormComponent addItem={this.addItem}/>
                 <a href="/"> Back to Home </a>
             </div>
         )
