@@ -6,3 +6,20 @@ const INITIAL_DATA = [
 
     }
 ]
+
+export function fetchActivities(){
+    return function(dispatch){
+        dispatch(fetchActivitesPending());
+    }  
+};
+
+let tempId = 0;
+
+export function addActivity(activity){
+    return function(dispatch){
+        dispatch(addActivityPending());
+        tempId++;
+        activity.id = tempId;
+        dispatch(addActivitySuccess(activity));
+    };
+}
