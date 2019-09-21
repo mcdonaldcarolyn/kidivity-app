@@ -5,8 +5,15 @@ import ListComponent from '../Components/ActivityListComponent';
 export default class CategoryPageComponent extends Component {
 
     render(){
+        const { slug } = this.props.match.params;
+        const category = categories.find(cat => cat.slug === slug);
+        const activitesForCategory = this.props.activites.filter(
+            activity => activity.category === slug
+        );
         return(
-            <ListComponent/>
+            <div>
+        
+            </div>
         )
     }
 }
