@@ -5,7 +5,10 @@ import ListComponent from '../Components/ActivityListComponent';
 export default class CategoriesPageComponent extends Component {
     render(){
         return(
-            <ListComponent/>
+            <div>
+            <h1>Categories</h1>
+            <CategoryListComponent categories={categories}/>
+            </div>
         )
     }
 }

@@ -17,7 +17,7 @@ export default class App extends Component {
         <Router>
           <Route exact path="/" component={HomePageComponent}/>
           <Route exact path="/categories" component={CategoriesPageComponent} />
-          <Route  path="/categories/:id" component={FormPageComponent} />
+          <Route  path="/categories/:id" component={CategoryPageComponent} />
           <Route exact path="/activities" component={ActivitiesPageComponent} />
           <Route exact path="/activities-new" component={FormPageComponent}/>
           <Route  path="/activities/:id" component={ActivityPageComponent} />
