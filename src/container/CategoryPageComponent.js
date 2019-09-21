@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import FormComponent from "../Components/ActivityFormComponent"
-import ListComponent from '../Components/ActivityListComponent';
-
+// import FormComponent from "../Components/ActivityFormComponent"
+import ActivitiesListComponent from '../Components/ActivityListComponent';
+import {categories} from '../data/categories';
+import { Link } from 'react-router-dom'
 export default class CategoryPageComponent extends Component {
 
     render(){
