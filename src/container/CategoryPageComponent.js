@@ -12,7 +12,9 @@ export default class CategoryPageComponent extends Component {
         );
         return(
             <div>
-        
+                <h1> Activites for {category.name}</h1>
+                <ActivitiesListComponent actvities={activitesForCategory}/>
+                
             </div>
         )
     }
