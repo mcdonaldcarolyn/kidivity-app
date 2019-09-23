@@ -3,13 +3,14 @@ export const initialState = {
     activites: []
 };
 
-export default function manageActivites(state= initialState, action){
+export default function manageActivities(state= initialState, action){
     {
         console.log(action);
         switch(action.type){
-            case: 'ADD_ACTIVITY':
-            return
+            case ADD_ACTIVITY:
+            return [...state, action.activity];
         }
-        return state
+     
+        return state;
     }
 }

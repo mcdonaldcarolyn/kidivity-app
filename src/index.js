@@ -6,11 +6,11 @@ import * as serviceWorker from './serviceWorker';
  import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import {Provider } from "react-redux";
-
+import manageActivities, {initialState} from './Reducer/manageActvities'
 
 const middlewares = [thunk];
 const store = createStore(
-    manageActivities,
+     manageActivities,
     initialState,
     applyMiddleware(...middlewares)
 );
