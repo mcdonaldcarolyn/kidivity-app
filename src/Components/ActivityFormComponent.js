@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {categories } from '../data/categories';
 export default class FormComponent extends Component{
     state = {
         name: '',
@@ -35,7 +35,7 @@ export default class FormComponent extends Component{
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addItem(this.state.name, this.state.address, this.state.description, this.state.category)
+        this.props.addActiivty(this.state.name, this.state.address, this.state.description, this.state.category)
         this.setState({
             name: '',
             address: '',
