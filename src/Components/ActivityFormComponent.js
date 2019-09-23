@@ -35,13 +35,26 @@ export default class FormComponent extends Component{
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addActiivty(this.state.name, this.state.address, this.state.description, this.state.category)
+        this.props.addActiivty({
+            name:this.state.name, 
+            address:this.state.address, 
+            description:this.state.description, 
+            category:this.state.category});
         this.setState({
             name: '',
             address: '',
             description: '',
             category: '',
-        })
+        });
+    };
+    renderCategories(){
+        return categories.map((category, idx) => {
+            return (
+                <option key={idx} value={category.slug}>
+                {category.name}
+                </option>
+            )
+        }
     }
 
     render (){
