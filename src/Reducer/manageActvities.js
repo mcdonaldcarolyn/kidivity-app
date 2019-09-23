@@ -5,5 +5,9 @@ export const initialState = {
 
 export default function manageActivites(state= initialState, action){
     {
+        switch(action.type){
+            
+        }
         return state
     }
+}
