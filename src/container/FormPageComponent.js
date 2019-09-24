@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ActivityFormComponent from "../Components/ActivityFormComponent"
 import ListComponent from '../Components/ActivityListComponent';
+import {addActivity} from '../actions/listActions';
+import {connect} from "react-redux";
 
 export default class FormPageComponent extends Component {
     constructor(){
@@ -9,7 +11,7 @@ export default class FormPageComponent extends Component {
             activities: []
         }
     }
-    addItem = (name, address, description) => {
+    addActivity = (name, address, description, category) => {
         const { id } = this.props.match.params;
         console.log ("got to addItem in activiies page")
         this.setState({
@@ -23,7 +25,7 @@ export default class FormPageComponent extends Component {
             <div>
                 <ListComponent category={id} activities={this.state.activities}/>
                 <hr></hr>
-                <ActivityFormComponent addItem={this.addItem}/>
+                <ActivityFormComponent addActivity={this.addActivity}/>
                 <a href="/"> Back to Home </a>
             </div>
         )

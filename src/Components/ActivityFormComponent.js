@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {categories } from '../data/categories';
+
 export default class FormComponent extends Component{
     state = {
         name: '',
@@ -54,7 +55,7 @@ export default class FormComponent extends Component{
                 {category.name}
                 </option>
             )
-        }
+        })
     }
 
     render (){

@@ -6,19 +6,21 @@ const INITIAL_DATA = [
 
     }
 ]
+
+let tempId = 0;
 export const ADD_ACTIVITY = "ADD_ACTIVITY"
 export function addActivity(activity){
-    return {
-        type: ADD_ACTIVITY,
-        activity
-    }
+    return function (dispatch) {
+        tempId++;
+        activity.id = tempId;
+        dispatch({
+            type: ADD_ACTIVITY, 
+            activity
+        });
+    };
 }
 
-// export function fetchActivities(){
-//     return function(dispatch =>{
-//         dispatch: type: 'ADD_ACTIVITY'});
-//         return 
-//     }
+
 //         ){
 //         dispatch(fetchActivitesPending());
 //     }  

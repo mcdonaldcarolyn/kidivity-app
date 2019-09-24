@@ -3,7 +3,8 @@ import ActivityFormComponent from "../Components/ActivityFormComponent"
 import ListComponent from '../Components/ActivityListComponent';
 import ActivityListComponent from '../Components/ActivityListComponent';
 import { Link } from 'react-router-dom';
-export default class ActivitiesPageComponent extends Component {
+import { connect } from 'react-redux';
+export class ActivitiesPageComponent extends Component {
 render(){
     return (
         <div>
@@ -15,3 +16,7 @@ render(){
 }
 
 }
+
+const mapStateToProps = state => ({activities: state.activities});
+
+export default connect (mapStateToProps, null)(ActivitiesPageComponent)
