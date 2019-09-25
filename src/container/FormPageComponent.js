@@ -4,7 +4,7 @@ import ActivityListComponent from '../Components/ActivityListComponent';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { addActivity } from "../actions/listActions";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export class FormPageComponent extends Component {
 
