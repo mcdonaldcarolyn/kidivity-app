@@ -1,29 +1,23 @@
 import React, {Component} from 'react';
 import ActivityFormComponent from "../Components/ActivityFormComponent"
-import ListComponent from '../Components/ActivityListComponent';
-import {addActivity} from '../actions/listActions';
-import {connect} from "react-redux";
+import ActivityListComponent from '../Components/ActivityListComponent';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { addActivity } from "../actions/listActions";
+import { Link } from "react-router-dom";
 
-export default class FormPageComponent extends Component {
-    constructor(){
-        super()
-        this.state = {
-            activities: []
-        }
-    }
-    addActivity = (name, address, description, category) => {
-        const { id } = this.props.match.params;
-        console.log ("got to addItem in activiies page")
-        this.setState({
-            activities: [...this.state.activities, { name, address, description, category: id }]
-        })
-    }
+export class FormPageComponent extends Component {
+
+    addActivity = activity => {
+        this.props.addActivity(activity);
+    };
+
     render() {
         const { id } = this.props.match.params;
 
         return (
             <div>
-                <ListComponent category={id} activities={this.state.activities}/>
+                <ActivityListComponent category={id} activities={this.props.activities}/>
                 <hr></hr>
                 <ActivityFormComponent addActivity={this.addActivity}/>
                 <a href="/"> Back to Home </a>
@@ -31,3 +25,14 @@ export default class FormPageComponent extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({ activities: state.activities });
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ addActivity }, dispatch);
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FormPageComponent);

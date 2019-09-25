@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import ActivityFormComponent from "../Components/ActivityFormComponent"
-import ListComponent from '../Components/ActivityListComponent';
 import ActivityListComponent from '../Components/ActivityListComponent';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';

@@ -27,7 +27,7 @@ export default class FormComponent extends Component{
             description: event.target.value
         })
     }
-    handlecategoryChange = event =>{
+    handleCategoryChange = event =>{
         event.preventDefault();
         this.setState({
             category: event.target.value
@@ -36,11 +36,12 @@ export default class FormComponent extends Component{
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addActiivty({
-            name:this.state.name, 
-            address:this.state.address, 
-            description:this.state.description, 
-            category:this.state.category});
+        this.props.addActivity({
+            name: this.state.name, 
+            address: this.state.address, 
+            description: this.state.description, 
+            category: this.state.category
+        });
         this.setState({
             name: '',
             address: '',
@@ -65,10 +66,9 @@ export default class FormComponent extends Component{
                     <input type="text" placeholder="name" onChange={this.handleNameChange}/>
                     <input type='text' placeholder="address" onChange={this.handleAddressChange}/>
                     <input type="text" placeholder="description" onChange={this.handleDescriptionChange}/>
-                    <select name="category" onChange={this.handlecategoryChange}>
-                        <option value="littles">littles</option>
-                        <option value="bigger kids">bigger kids</option>
-                        <option value="tween and older">tween and older</option>
+                    <select name="category" onChange={this.handleCategoryChange}>
+                        <option>choose category</option>
+                        {this.renderCategories()}
                     </select>
                     <button type="submit">create</button>
                 </form>

@@ -4,22 +4,20 @@ import { Link } from 'react-router-dom';
 export default class ActivityListComponent extends Component{
     renderActivities = () => {
         return this.props.activities.map((activity, idx) => {
+            const url = '/activities/' + activity.id;
             return (
-                <li key= {idx}>
-                    <Link to="/activities/{activity.id}">{activity.name}</Link>
+                <li key={idx}>
+                    <Link to={url}>{activity.name}</Link>
                 </li>
             );
-            });
-        };
-                    
-                
-    
+        });
+    };
+
     render(){
         return(
-                <ul>
+            <ul>
                 {this.renderActivities()}
-                </ul>
-           
-        )
+            </ul>
+        );
     }
 }
