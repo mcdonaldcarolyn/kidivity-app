@@ -7,10 +7,10 @@ import { connect } from "react-redux";
 import { loadActivities, addActivity } from "../actions/listActions";
 
 export class CategoryPageComponent extends Component {
-  componentDidMount() {
-    debugger
-    this.props.loadActivities();
-  }
+  // componentDidMount() {
+  //   debugger
+  //   this.props.loadActivities;
+  // }
 
   render() {
     const { slug } = this.props.match.params;

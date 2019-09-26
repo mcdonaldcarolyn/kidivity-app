@@ -72,3 +72,15 @@ export function addActivityError(error) {
     error
   };
 }
+export function fetchActivitiesPending() {
+  return {
+    type: ActivityActions.FETCH_ACTIVITIES_START
+  };
+}
+
+export function fetchActivitiesSuccess(activities) {
+  return {
+    type: ActivityActions.FETCH_ACTIVITIES_START,
+    activities
+  };
+}
