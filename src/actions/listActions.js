@@ -60,15 +60,15 @@ export function addActivity(activity) {
   };
 }
 
-// export function addActivitySuccess(activity) {
-//   return {
-//     type: ADD_ACTIVITY_SUCCESS,
-//     activity
-//   };
-// }
-// export function addActivityError(error) {
-//   return {
-//     type: ADD_ACTIVITY_ERROR,
-//     error
-//   };
-// }
+export function addActivitySuccess(activity) {
+  return {
+    type: ADD_ACTIVITY_SUCCESS,
+    activity
+  };
+}
+export function addActivityError(error) {
+  return {
+    type: ADD_ACTIVITY_ERROR,
+    error
+  };
+}
