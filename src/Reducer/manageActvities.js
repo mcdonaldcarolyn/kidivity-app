@@ -1,4 +1,4 @@
-import { ADD_ACTIVITY_SUCCESS } from "../actions/listActions";
+import { ADD_ACTIVITY_SUCCESS, FETCH_ACTIVITIES_SUCCESS } from "../actions/listActions";
 
 export const initialState = {
   activities: []
