@@ -3,7 +3,7 @@ import ActivityListComponent from "../Components/ActivityListComponent";
 import { categories } from "../data/categories";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addActivity, loadActivities } from "../actions/listActions";
+
 
 export class CategoryPageComponent extends Component {
   
