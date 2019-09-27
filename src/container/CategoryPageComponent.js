@@ -3,12 +3,12 @@ import ActivityListComponent from "../Components/ActivityListComponent";
 import { categories } from "../data/categories";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { addActivity } from "../actions/listActions";
+import { addActivity, loadActivities } from "../actions/listActions";
 
 export class CategoryPageComponent extends Component {
   componentDidMount() {
     debugger
-    this.props.loadActivities;
+    this.props.loadActivities();
   }
 
   render() {
