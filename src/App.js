@@ -8,7 +8,16 @@ import CategoryPageComponent from './container/CategoryPageComponent';
 import ActivitiesPageComponent from './container/ActivitiesPageComponent';
 import CategoriesPageComponent from './container/CategoryPageComponent';
 import ActivityPageComponent from './container/ActivityPageComponent';
-export default class App extends Component {
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { loadActivities } from "./actions/listActions";
+
+export class App extends Component {
+
+  componentDidMount() {
+    this.props.loadActivities();
+  }
+
   render(){
     return (
       <div>
@@ -25,5 +34,15 @@ export default class App extends Component {
     );
   }
 }
+
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ loadActivities }, dispatch);
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
 
 

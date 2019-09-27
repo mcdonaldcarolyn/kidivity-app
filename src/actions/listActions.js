@@ -1,9 +1,9 @@
 export const ADD_ACTIVITY_SUCCESS = "ADD_ACTIVITY_SUCCESS";
 export const ADD_ACTIVITY_ERROR = "ADD_ACTIVITY_ERROR";
 
-export const LOAD_ACTIVITIES_SUCCESS = "LOAD_ACTIVITIES_SUCCESS";
-export const LOAD_ACTIVITIES_ERROR = "LOAD_ACTIVITIES_ERROR";
-
+export const FETCH_ACTIVITIES_START = "FETCH_ACTIVITIES_START";
+export const FETCH_ACTIVITIES_SUCCESS = "FETCH_ACTIVITIES_SUCCESS";
+export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 // export const addActivity = () => {
 //   return dispatch => {
 //     dispatch({ type: ADD_ACTIVITY_SUCCESS })
@@ -13,25 +13,25 @@ export const LOAD_ACTIVITIES_ERROR = "LOAD_ACTIVITIES_ERROR";
 //         .then(activities => dispatch({
 //             type: ADD_ACTIVITY_SUCCESS, payload: activities
 //         }))
-        
+
 //       )
 //   }
 // }
-  
 
 export function loadActivities() {
   return function(dispatch) {
+    dispatch({ type: FETCH_ACTIVITIES_START });
     fetch("/activities")
       .then(resp => resp.json())
       .then(activities => {
         dispatch({
-          type: LOAD_ACTIVITIES_SUCCESS,
+          type: FETCH_ACTIVITIES_SUCCESS,
           activities
         });
       })
       .catch(error => {
         dispatch({
-          type: LOAD_ACTIVITIES_ERROR,
+          type: FETCH_ACTIVITIES_ERROR,
           error
         });
       });
@@ -74,13 +74,13 @@ export function addActivityError(error) {
 }
 export function fetchActivitiesPending() {
   return {
-    type: ActivityActions.FETCH_ACTIVITIES_START
+    type: FETCH_ACTIVITIES_START
   };
 }
 
 export function fetchActivitiesSuccess(activities) {
   return {
-    type: ActivityActions.FETCH_ACTIVITIES_START,
+    type: FETCH_ACTIVITIES_START,
     activities
   };
 }

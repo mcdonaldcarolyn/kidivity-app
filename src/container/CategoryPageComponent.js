@@ -3,14 +3,13 @@ import ActivityListComponent from "../Components/ActivityListComponent";
 import { categories } from "../data/categories";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-//import { bindActionCreators } from "redux";
-import { loadActivities, addActivity } from "../actions/listActions";
+import { addActivity } from "../actions/listActions";
 
 export class CategoryPageComponent extends Component {
-  // componentDidMount() {
-  //   debugger
-  //   this.props.loadActivities;
-  // }
+  componentDidMount() {
+    debugger
+    this.props.loadActivities;
+  }
 
   render() {
     const { slug } = this.props.match.params;
