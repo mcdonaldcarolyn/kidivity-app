@@ -24,9 +24,6 @@ export class CategoryPageComponent extends Component {
   }
 }
 const mapStateToProps = state => ({ activities: state.activities });
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ activities }, dispatch);
-// }
 
 export default connect(
   mapStateToProps
