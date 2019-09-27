@@ -18,12 +18,12 @@ export default class MenuComponent extends Component {
   render() {
     return (
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">Kidtivity</Navbar.Brand>
+        <Navbar.Brand href="/">Kidtivity</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/categories">Categories</Nav.Link>
+            <Nav.Link href="/categories/:slug">Categories</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               {this.renderCategories()}
               <NavDropdown.Divider />

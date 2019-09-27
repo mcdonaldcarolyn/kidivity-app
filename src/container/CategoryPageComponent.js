@@ -6,10 +6,7 @@ import { connect } from "react-redux";
 import { addActivity, loadActivities } from "../actions/listActions";
 
 export class CategoryPageComponent extends Component {
-  // componentDidMount() {
-  //   debugger
-  //   this.props.loadActivities();
-  // }
+  
 
   render() {
     const { slug } = this.props.match.params;
@@ -19,7 +16,7 @@ export class CategoryPageComponent extends Component {
     );
     return (
       <div>
-        <h1> activities for {category.id}</h1>
+        <h1> Activities for {category.name}</h1>
         <ActivityListComponent activities={activitiesForCategory} />
         <Link to="/activities-new">Add new</Link>
       </div>
