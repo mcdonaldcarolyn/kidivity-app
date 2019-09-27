@@ -30,5 +30,5 @@ const mapStateToProps = state => ({ activities: state.activities });
 
 export default connect(
   mapStateToProps
-  // {addActivity}
+  
 )(CategoryPageComponent);
