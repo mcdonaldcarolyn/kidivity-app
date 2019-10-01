@@ -2,6 +2,7 @@ import { ADD_ACTIVITY_SUCCESS, FETCH_ACTIVITIES_SUCCESS } from "../actions/listA
 
 export const initialState = {
   activities: []
+  // categories: []
 };
 
 export default function manageActivities(state = initialState, action) {
@@ -10,7 +11,7 @@ export default function manageActivities(state = initialState, action) {
     case ADD_ACTIVITY_SUCCESS:
       return {
         ...state,
-        activities: [...state.activities, action.activity]
+        activities: [...state.activities, action.activity, action.activity]
       };
     case FETCH_ACTIVITIES_SUCCESS:
       return {
