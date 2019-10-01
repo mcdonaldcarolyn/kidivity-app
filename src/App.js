@@ -11,11 +11,11 @@ import ActivityPageComponent from './container/ActivityPageComponent';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { loadActivities } from "./actions/listActions";
-
+import { addModels } from '../actions/listActions';
 export class App extends Component {
 
   componentDidMount() {
-    this.props.loadActivities();
+    this.props.addModels();
   }
 
   render(){
