@@ -17,7 +17,10 @@ export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 //       )
 //   }
 // }
-
+export function addModel() {
+  return function loadActivities()
+    
+};
 export function loadActivities() {
   return function(dispatch) {
     dispatch({ type: FETCH_ACTIVITIES_START });
@@ -77,6 +80,12 @@ export function addActivitySuccess(activity) {
   return {
     type: ADD_ACTIVITY_SUCCESS,
     activity
+  };
+}
+export function addCategorySuccess(category) {
+  return {
+    type: ADD_CATEGORY_SUCCESS,
+    category
   };
 }
 export function addActivityError(error) {
