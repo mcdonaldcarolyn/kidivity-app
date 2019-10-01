@@ -28,6 +28,14 @@ export function loadActivities() {
           type: FETCH_ACTIVITIES_SUCCESS,
           activities
         });
+        fetch("/categories")
+          .then(resp => resp.json())
+          .then(categories => {
+            dispatch({
+              type: FETCH_ACTIVITIES_SUCCESS,
+              activities
+            })
+          })
       })
       .catch(error => {
         dispatch({
@@ -57,7 +65,7 @@ export function addActivity(activity) {
     fetch("/categories", { method: "POST", body, headers })
       .then(resp => resp.json())
       .then(category => {
-        dispatch(addActivitySucess(category))
+        dispatch(addActivitySuccess(category))
       })
       .catch(error => {
         dispatch(addActivityError(error));

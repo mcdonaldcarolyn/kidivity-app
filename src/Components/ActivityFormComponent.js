@@ -52,7 +52,7 @@ export default class FormComponent extends Component{
     renderCategories(){
         return categories.map((category, idx) => {
             return (
-                <option key={idx} value={category.slug}>
+                <option key={idx} value={category.id}>
                 {category.name}
                 </option>
             )

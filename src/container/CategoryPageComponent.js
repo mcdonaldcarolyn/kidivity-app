@@ -9,10 +9,10 @@ export class CategoryPageComponent extends Component {
   
 
   render() {
-    const { slug } = this.props.match.params;
-    const category = categories.find(cat => cat.slug === slug);
+    const { id } = this.props.match.params;
+    const category = categories.find(cat => cat.id === id);
     const activitiesForCategory = this.props.activities.filter(
-      activity => activity.category === slug
+      activity => activity.category === id
     );
     return (
       <div>
