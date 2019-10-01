@@ -27,11 +27,11 @@ export class FormPageComponent extends Component {
 
 const mapStateToProps = state => ({ activities: state.activities });
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ addActivity }, dispatch);
-}
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({ addActivity }, dispatch);
+// }
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  {addActivity}
 )(FormPageComponent);

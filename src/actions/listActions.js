@@ -54,6 +54,11 @@ export function addActivity(activity) {
       .then(activity => {
         dispatch(addActivitySuccess(activity));
       })
+    fetch("/categories", { method: "POST", body, headers })
+      .then(resp => resp.json())
+      .then(category => {
+        dispatch(addActivitySucess(category))
+      })
       .catch(error => {
         dispatch(addActivityError(error));
       });
