@@ -23,7 +23,7 @@ export class CategoryPageComponent extends Component {
     );
   }
 }
-const mapStateToProps = state => ({ activities: state.activities });
+const mapStateToProps = state => ({ activities: state.activities, categories: state.activities });
 
 export default connect(
   mapStateToProps

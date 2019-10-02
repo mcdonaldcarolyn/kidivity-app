@@ -78,6 +78,8 @@ class ActivityFormComponent extends Component {
     }
 }
     const mapStateToProps = state => {
-        categories: state.categories
+        return {
+            categories: state.categories
+        }
     }
 export default connect(mapStateToProps)(ActivityFormComponent)

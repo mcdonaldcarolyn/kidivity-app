@@ -11,7 +11,7 @@ import ActivityPageComponent from './container/ActivityPageComponent';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { loadActivities } from "./actions/listActions";
-import { addModels } from '../actions/listActions';
+import { addModels } from './actions/listActions';
 export class App extends Component {
 
   componentDidMount() {
@@ -37,7 +37,7 @@ export class App extends Component {
 
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ loadActivities }, dispatch);
+  return bindActionCreators({ addModels }, dispatch);
 }
 
 export default connect(

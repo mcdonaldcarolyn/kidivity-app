@@ -1,9 +1,11 @@
+import {loadCategories} from './categoryActions'
 export const ADD_ACTIVITY_SUCCESS = "ADD_ACTIVITY_SUCCESS";
 export const ADD_ACTIVITY_ERROR = "ADD_ACTIVITY_ERROR";
 
 export const FETCH_ACTIVITIES_START = "FETCH_ACTIVITIES_START";
 export const FETCH_ACTIVITIES_SUCCESS = "FETCH_ACTIVITIES_SUCCESS";
 export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
+
 // export const addActivity = () => {
 //   return dispatch => {
 //     dispatch({ type: ADD_ACTIVITY_SUCCESS })
@@ -19,6 +21,7 @@ export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 // }
 
 export function addModels() {
+  debugger
    loadActivities()
    loadCategories()
     

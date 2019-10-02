@@ -5,7 +5,7 @@ export const FETCH_CATEGORIES_SUCCESS = "FETCH_CATEGORIES_SUCCESS";
 export const FETCH_CATEGORIES_ERROR = "FETCH_CATEGORIES_ERROR";
 
 
-export function loadCategory() {
+export function loadCategories() {
     return function (dispatch) {
         dispatch({ type: FETCH_CATEGORIES_START });
         fetch("/categories")
@@ -18,7 +18,7 @@ export function loadCategory() {
             })
             .catch(error => {
                 dispatch({
-                    type: FETCH_ACTIVITIES_ERROR,
+                    type: FETCH_CATEGORIES_ERROR,
                     error
                 });
             });
@@ -57,14 +57,14 @@ export function addCategoryError(error) {
         error
     };
 }
-export function fetchCategoryPending() {
+export function fetchCategoriesPending() {
     return {
-        type: FETCH_CATEGORY_START
+        type: FETCH_CATEGORIES_START
     };
 }
-export function fetchCategorySuccess(categories) {
+export function fetchCategoriesSuccess(categories) {
     return {
-        type: FETCH_CATEGORY_SUCCESS,
+        type: FETCH_CATEGORIES_SUCCESS,
         categories
     };
 }
