@@ -51,9 +51,14 @@ export function addCategorySuccess(category) {
         category
     };
 }
-export function addActivityError(error) {
+export function addCategoryError(error) {
     return {
-        type: ADD_ACTIVITY_ERROR,
+        type: ADD_CATEGORY_ERROR,
         error
+    };
+}
+export function fetchCategoryPending() {
+    return {
+        type: FETCH_CATEGORY_START
     };
 }
