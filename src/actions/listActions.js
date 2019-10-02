@@ -1,6 +1,6 @@
 export const ADD_ACTIVITY_SUCCESS = "ADD_ACTIVITY_SUCCESS";
 export const ADD_ACTIVITY_ERROR = "ADD_ACTIVITY_ERROR";
-export const ADD_CATEGORY_SUCCESS = "ADD_CATEGORY_SUCCESS";
+
 export const FETCH_ACTIVITIES_START = "FETCH_ACTIVITIES_START";
 export const FETCH_ACTIVITIES_SUCCESS = "FETCH_ACTIVITIES_SUCCESS";
 export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
@@ -17,6 +17,7 @@ export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 //       )
 //   }
 // }
+
 export function addModels() {
    loadActivities()
    loadCategories()
@@ -49,19 +50,7 @@ export function loadActivities() {
       });
   };
 }
-export function loadCategories() {
-  return function (dispatch) {
-    const body = JSON.stringify({ category });
-    const headers = {
-      "Content-Type": "application/json"
-    };
-    fetch("/categories", { method: "POST", body, headers })
-      .then(resp => resp.json())
-      .then(category => {
-        dispatch(addCategorySuccess(category))
-      })
-  }
-}
+
 
 export function addActivity(activity) {
   return function(dispatch) {
@@ -79,11 +68,6 @@ export function addActivity(activity) {
       .then(activity => {
         dispatch(addActivitySuccess(activity));
       })
-    fetch("/categories", { method: "POST", body, headers })
-      .then(resp => resp.json())
-      .then(category => {
-        dispatch(addActivitySuccess(category))
-      })
       .catch(error => {
         dispatch(addActivityError(error));
       });
@@ -96,12 +80,7 @@ export function addActivitySuccess(activity) {
     activity
   };
 }
-export function addCategorySuccess(category) {
-  return {
-    type: ADD_CATEGORY_SUCCESS,
-    category
-  };
-}
+
 export function addActivityError(error) {
   return {
     type: ADD_ACTIVITY_ERROR,
