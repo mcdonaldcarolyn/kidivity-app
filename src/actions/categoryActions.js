@@ -35,8 +35,8 @@ export function addCategory(category) {
         };
         fetch("/categories", { method: "POST", body, headers })
             .then(resp => resp.json())
-            .then(activity => {
-                dispatch(addCategorySuccess(categories));
+            .then(category => {
+                dispatch(addCategorySuccess(category));
             })
             .catch(error => {
                 dispatch(addCategoryError(error));
@@ -60,5 +60,11 @@ export function addCategoryError(error) {
 export function fetchCategoryPending() {
     return {
         type: FETCH_CATEGORY_START
+    };
+}
+export function fetchCategorySuccess(categories) {
+    return {
+        type: FETCH_CATEGORY_SUCCESS,
+        categories
     };
 }

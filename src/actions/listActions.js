@@ -95,14 +95,9 @@ export function fetchActivitiesPending() {
 
 export function fetchActivitiesSuccess(activities) {
   return {
-    type: FETCH_ACTIVITIES_START,
+    type: FETCH_ACTIVITIES_SUCCESS,
     activities
   };
 }
-export function fetchCategoriesSuccess(categories) {
-  return {
-    type: FETCH_CATEGORIES_START,
-    categories
-  };
-}
+
 
