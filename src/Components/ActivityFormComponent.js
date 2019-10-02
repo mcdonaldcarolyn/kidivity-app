@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 // import {categories } from '../data/categories';
 import { addModels } from '../actions/listActions';
 import { connect } from 'react-redux';
+
 class ActivityFormComponent extends Component {
     state = {
         name: '',
@@ -38,7 +39,7 @@ class ActivityFormComponent extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-        this.props.addActivity(
+        this.props.addModels(
             this.state
         );
         this.setState({
