@@ -3,7 +3,7 @@ import ActivityFormComponent from "../Components/ActivityFormComponent"
 import ActivityListComponent from '../Components/ActivityListComponent';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { addActivity } from "../actions/listActions";
+import { addModels } from "../actions/listActions";
 
 export class FormPageComponent extends Component {
 
@@ -33,5 +33,5 @@ const mapStateToProps = state => ({ activities: state.activities });
 
 export default connect(
   mapStateToProps,
-  {addActivity}
+  {addModels}
 )(FormPageComponent);
