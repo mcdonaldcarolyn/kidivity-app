@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ActivityListComponent from "../Components/ActivityListComponent";
-import { categories } from "../data/categories";
+// import { categories } from "../data/categories";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 

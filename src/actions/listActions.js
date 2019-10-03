@@ -21,11 +21,12 @@ export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 // }
 
 export function addModels() {
-  debugger
-   loadActivities()
-   loadCategories()
-    
-};
+  return function (dispatch) {
+    loadActivities()(dispatch);
+    loadCategories()(dispatch);
+  }  
+}
+
 export function loadActivities() {
   return function(dispatch) {
     dispatch({ type: FETCH_ACTIVITIES_START });
