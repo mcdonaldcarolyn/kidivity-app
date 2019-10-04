@@ -10,7 +10,7 @@ export class ActivityPageComponent extends Component{
         return (
             <div>
                 <h1>{activity.name}</h1>
-                <div>Category: {activity.category}</div>
+                <div>Category: {category.title}</div>
                 <div>Address: {activity.address}</div>
                 <div>Description: {activity.description}</div>
                 
@@ -18,6 +18,9 @@ export class ActivityPageComponent extends Component{
         )
     }
 }
-const mapStateToProps = state => ({ activities: state.activities });
+const mapStateToProps = state => ({
+    activities: state.activities,
+    categories: state.categories,
+});
 
 export default connect(mapStateToProps)(ActivityPageComponent)

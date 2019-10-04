@@ -45,8 +45,8 @@ class ActivityFormComponent extends Component {
       name: "",
       address: "",
       description: "",
-      category_attributes: { title: "" },
-      category_ids: []
+      categories_attributes: { title: "" },
+      categories_ids: []
     });
   };
   renderCategories() {
@@ -90,7 +90,7 @@ class ActivityFormComponent extends Component {
   }
 }
 const mapStateToProps = state => {
-  return {
+    return {
     categories: state.categories
   };
 };
