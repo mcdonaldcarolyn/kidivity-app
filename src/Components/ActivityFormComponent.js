@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import {categories } from '../data/categories';
 import { addActivity } from "../actions/listActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";

@@ -58,11 +58,7 @@ export function loadActivities() {
 
 export function addActivity(activity) {
   return function(dispatch) {
-    // tempId++;
-    // activity.id = tempId;
-    // dispatch({
-    //     type: ADD_ACTIVITY,
-    //     activity
+    
     const body = JSON.stringify({ activity });
     const headers = {
       "Content-Type": "application/json"
