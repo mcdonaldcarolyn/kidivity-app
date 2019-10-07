@@ -12,8 +12,11 @@ export class HomePageComponent extends Component {
     };
     const menuStyle = {
       color: "black",
-      textAlign: "right",
+      textAlign: "center",
       fontFamily: "Times New Roman"
+    }
+    const buttonStyle = {
+      textAlign: "center",
     }
     const sectionStyle = {
       backgroundImage: "url(" + "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" +")",
@@ -26,10 +29,22 @@ export class HomePageComponent extends Component {
 
     return (
       <div style={sectionStyle}>
-        <h2 style ={headerstyle}>Welcome to Kidivity</h2>
+        <br />
+        <br/>
+        <h2 style={headerstyle}>Welcome to Kidivity</h2>
+        <br/>
         <h4 style={menuStyle}> Where you can create a master list of Kid
-       acivities!</h4>
-        <CategoryListComponent categories={this.props.categories} />
+       activities!</h4>
+        <br/>
+        <div style={buttonStyle}>
+          <CategoryListComponent categories={this.props.categories} />
+          <br/>
+          <br/>
+          <br />
+          <br />
+          <br />
+          <br />
+      </div>
       </div>
     );
   }

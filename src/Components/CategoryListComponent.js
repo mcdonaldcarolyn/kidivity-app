@@ -8,11 +8,11 @@ export default class CategoryListComponent extends Component {
     return categories.map(category => {
       const url = "/categories/" + category.id;
       return (
-        <li key={category.id}>
+        <div key={category.id}>
           <Link to={url}>
-            <Button variant="outline-success">{category.title}</Button>
+            <Button variant="outline-dark">{category.title}</Button>
           </Link>
-        </li>
+        </div>
       );
     });
   };
