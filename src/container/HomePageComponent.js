@@ -5,10 +5,17 @@ import { connect } from "react-redux";
 
 export class HomePageComponent extends Component {
   render() {
+    const headerstyle = {
+      color: "blue",
+      textAlign: 'center',
+      fontFamily: "Bradley Hand, cursive"
+    };
+    
     return (
       <div>
-        Welcome to Kidivity- Where you can create a master list of Kid
-        acivities!
+        <h2 style ={headerstyle}>Welcome to Kidivity</h2>
+        <h4> Where you can create a master list of Kid
+       acivities!</h4>
         <CategoryListComponent categories={this.props.categories} />
       </div>
     );

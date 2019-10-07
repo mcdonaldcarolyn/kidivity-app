@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import React, { Component } from "react";
 import FormPageComponent from "./container/FormPageComponent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import MenuComponent from "./Components/MenuComoponent";
