@@ -1,26 +1,33 @@
 import React, { Component } from "react";
 import CategoryListComponent from "../Components/CategoryListComponent";
-import background from '../images/background.png'
+import background from '../image/background_image.png'
 import { connect } from "react-redux";
 
 export class HomePageComponent extends Component {
   render() {
     const headerstyle = {
-      color: "blue",
+      color: "black",
       textAlign: 'center',
       fontFamily: "Bradley Hand, cursive"
     };
+    const menuStyle = {
+      color: "black",
+      textAlign: "right",
+      fontFamily: "Times New Roman"
+    }
     const sectionStyle = {
-      width: '100%',
-      height: '400px',
-      backgroundImage: "url("+ {background} + ")"
+      backgroundImage: "url(" + "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" +")",
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+      
 
     }
 
     return (
       <div style={sectionStyle}>
         <h2 style ={headerstyle}>Welcome to Kidivity</h2>
-        <h4> Where you can create a master list of Kid
+        <h4 style={menuStyle}> Where you can create a master list of Kid
        acivities!</h4>
         <CategoryListComponent categories={this.props.categories} />
       </div>
