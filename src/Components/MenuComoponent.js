@@ -22,7 +22,7 @@ export default class MenuComponent extends Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/categories/:id">Categories</Nav.Link>
+            <Nav.Link href="/categories">Categories</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               {this.renderCategories()}
               <NavDropdown.Divider />
