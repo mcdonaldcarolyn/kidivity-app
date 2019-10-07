@@ -6,10 +6,13 @@ import { connect } from "react-redux";
 export class CategoryPageComponent extends Component {
   render() {
     const sectionStyle = {
-      backgroundImage: "url(" + "https://images.unsplash.com/photo-1564612123554-78943ddb2ba3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"+ ")",
+      backgroundImage: "url(" + "https://images.unsplash.com/photo-1569271836752-ed9351b75521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"+ ")",
       backgroundPosition: 'center',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
+    }
+    const linkColor = {
+      color: 'black'
     }
     const id = parseInt(this.props.match.params.id, 10);
     const categories = this.props.categories || [];
@@ -26,9 +29,13 @@ export class CategoryPageComponent extends Component {
       <div style={sectionStyle}>
         <br/>
         <h1> Activities for {category.title}</h1>
-        <ActivityListComponent activities={activitiesForCategory} />
-        <br/>
-        <Link to="/activities-new">Add new</Link>
+        <div style={linkColor}>
+          <ActivityListComponent activities={activitiesForCategory} />
+        </div>
+        <br />
+        <div style={linkColor}>
+          <Link to="/activities-new" style={linkColor}>Add new</Link>
+        </div>
         <br />
         <br />
         <br />

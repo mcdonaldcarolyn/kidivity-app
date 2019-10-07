@@ -5,9 +5,12 @@ export default class ActivityListComponent extends Component{
     renderActivities = () => {
         return this.props.activities.map((activity, idx) => {
             const url = '/activities/' + activity.id;
+            const linkColor = {
+                color: 'black'
+            }
             return (
                 <li key={idx}>
-                    <Link to={url}>{activity.name}</Link>
+                    <Link style={linkColor} to={url}>{activity.name}</Link>
                 </li>
             );
         });
