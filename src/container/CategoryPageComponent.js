@@ -11,7 +11,8 @@ export class CategoryPageComponent extends Component {
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      minHeight: "300px"
+      Height: "700px",
+      width: "1500px"
     };
     const linkColor = {
       color: "black"
