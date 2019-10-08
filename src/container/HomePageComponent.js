@@ -22,7 +22,8 @@ export class HomePageComponent extends Component {
         "url(https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
       backgroundPosition: "center",
       backgroundSize: "cover",
-      backgroundRepeat: "no-repeat"
+      backgroundRepeat: "no-repeat", 
+      
     };
 
     return (
@@ -38,18 +39,8 @@ export class HomePageComponent extends Component {
         <br />
         <div style={buttonStyle}>
           <CategoryListComponent categories={this.props.categories} />
+          
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />}
         </div>
       </div>
     );
