@@ -23,7 +23,8 @@ export class HomePageComponent extends Component {
       backgroundPosition: "center",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat", 
-      
+      width: "1500px",
+      height: "700px"
     };
 
     return (
