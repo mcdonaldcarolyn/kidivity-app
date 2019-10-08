@@ -8,8 +8,8 @@ class ActivityFormComponent extends Component {
     name: "",
     address: "",
     description: "",
-    categories_attributes: { title: "" }
-    // categories_ids: []
+    categories_attributes: []
+    // category_ids: []
   };
 
   handleNameChange = event => {
@@ -30,24 +30,23 @@ class ActivityFormComponent extends Component {
       description: event.target.value
     });
   };
+  
   handleCategoryChange = event => {
     event.preventDefault();
     this.setState({
-      //   categories_ids: [event.target.value]
-      categories_attributes: {
-        title: event.target.value
-      }
+      categories_attributes: [...this.state.categories_attributes,{title: event.target.value}]
     });
   };
 
   handleOnSubmit = event => {
     event.preventDefault();
+    debugger
     this.props.addActivity(this.state);
     this.setState({
       name: "",
       address: "",
       description: "",
-      categories_attributes: { title: "" }
+      categories_attributes: []
       //   categories_ids: []
     });
   };
@@ -62,7 +61,9 @@ class ActivityFormComponent extends Component {
     });
   }
 
-  render() {
+  render(){
+  console.log(this.state);
+  
     return (
       <div>
         <form onSubmit={this.handleOnSubmit}>
@@ -81,7 +82,7 @@ class ActivityFormComponent extends Component {
             placeholder="description"
             onChange={this.handleDescriptionChange}
           />
-          <select name="category" onChange={this.handleCategoryChange}>
+          <select multiple name="category" >
             <option>choose category</option>
             {this.renderCategories()}
           </select>
