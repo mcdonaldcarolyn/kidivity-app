@@ -8,8 +8,8 @@ class ActivityFormComponent extends Component {
     name: "",
     address: "",
     description: "",
-    category_attributes: { title: "" },
-    category_ids: []
+    categories_attributes: { title: "" }
+    // categories_ids: []
   };
 
   handleNameChange = event => {
@@ -33,7 +33,10 @@ class ActivityFormComponent extends Component {
   handleCategoryChange = event => {
     event.preventDefault();
     this.setState({
-      category: event.target.value
+      //   categories_ids: [event.target.value]
+      categories_attributes: {
+        title: event.target.value
+      }
     });
   };
 
@@ -44,15 +47,15 @@ class ActivityFormComponent extends Component {
       name: "",
       address: "",
       description: "",
-      categories_attributes: { title: "" },
-      categories_ids: []
+      categories_attributes: { title: "" }
+      //   categories_ids: []
     });
   };
   renderCategories() {
     const categories = this.props.categories || [];
     return categories.map((category, idx) => {
       return (
-        <option key={idx} value={category.id}>
+        <option key={idx} value={category.title}>
           {category.title}
         </option>
       );
@@ -89,7 +92,7 @@ class ActivityFormComponent extends Component {
   }
 }
 const mapStateToProps = state => {
-    return {
+  return {
     categories: state.categories
   };
 };
