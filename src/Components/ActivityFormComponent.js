@@ -43,7 +43,6 @@ class ActivityFormComponent extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault();
-    debugger;
     this.props.addActivity(this.state);
     this.setState({
       name: "",
