@@ -11,7 +11,7 @@ A tool for showcasing local activities for kids. Divided into 3 ages, Kidivity i
 * Add your favorite places to bring your kids. 
 
 ## Contributing
-    Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 
 ## License
