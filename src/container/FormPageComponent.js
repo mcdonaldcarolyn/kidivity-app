@@ -10,10 +10,19 @@ export class FormPageComponent extends Component {
     };
 
     render() {
+        const sectionStyle = {
+            backgroundImage:
+                "url(https://images.unsplash.com/photo-1487251918058-8c9ee71607dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            height: "700px",
+            width: "1500px"
+        };
         const { id } = this.props.match.params;
 
         return (
-            <div>
+            <div style={sectionStyle}>
                 <ActivityListComponent category={id} activities={this.props.activities}/>
                 <hr></hr>
                 <ActivityFormComponent addActivity={this.addActivity}/>

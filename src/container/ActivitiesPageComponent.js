@@ -3,7 +3,8 @@ import ActivityListComponent from '../Components/ActivityListComponent';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 export class ActivitiesPageComponent extends Component {
-render(){
+    render() {
+       
     return (
         <div>
         <h1>All fun kidivities</h1>
