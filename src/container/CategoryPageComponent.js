@@ -33,7 +33,7 @@ export class CategoryPageComponent extends Component {
         <br />
         <h1> Activities for {category.title}</h1>
         <div style={linkColor}>
-          {/* <ActivityListComponent activities={activitiesForCategory} /> */}
+          <ActivityListComponent activities={this.props.activities} />
         </div>
         <br />
         <div style={linkColor}>
@@ -46,7 +46,7 @@ export class CategoryPageComponent extends Component {
   }
 }
 const mapStateToProps = state => ({
-  activities: state.activities,
+  activities: state.manageActivities.activities,
   categories: state.manageCategories.categories
 });
 
