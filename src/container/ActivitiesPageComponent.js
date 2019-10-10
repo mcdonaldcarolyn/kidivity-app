@@ -16,6 +16,6 @@ export class ActivitiesPageComponent extends Component {
 
 }
 
-const mapStateToProps = state => ({activities: state.activities});
+const mapStateToProps = state => ({activities: state.manageActivities.activities});
 
 export default connect (mapStateToProps, null)(ActivitiesPageComponent)

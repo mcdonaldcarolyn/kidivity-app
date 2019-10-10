@@ -25,14 +25,19 @@ export class FormPageComponent extends Component {
             <div style={sectionStyle}>
                 <ActivityListComponent category={id} activities={this.props.activities}/>
                 <hr></hr>
-                <ActivityFormComponent addActivity={this.addActivity}/>
+                <ActivityFormComponent addActivity={this.addActivity} categories={this.props.categories}/>
                 <a href="/"> Back to Home </a>
             </div>
         )
     }
 }
 
-const mapStateToProps = state => ({ activities: state.activities });
+const mapStateToProps = state => {
+    return{
+        activities: state.manageActivities.activities,
+         categories: state.manageCategories.categories
+    }
+};
 
 // function mapDispatchToProps(dispatch) {
 //   return bindActionCreators({ addActivity }, dispatch);

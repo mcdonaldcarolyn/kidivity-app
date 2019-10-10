@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 export default class CategoryListComponent extends Component {
+  
   renderCategories = () => {
     const categories = this.props.categories || [];
     return categories.map(category => {

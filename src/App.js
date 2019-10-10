@@ -28,18 +28,23 @@ export class App extends Component {
           <Route path="/categories/:id" component={CategoryPageComponent} />
           <Route exact path="/activities" component={ActivitiesPageComponent} />
           <Route exact path="/activities-new" component={FormPageComponent} />
-          <Route path="/activities/:id" component={ActivityPageComponent} />
+          <Route path="/activities/:id" render={(routerProps) => <ActivityPageComponent {...routerProps} activities={this.props.activities} categories={this.props.categories}/>}/>
         </Router>
       </div>
     );
   }
 }
-
+const mapStateToProps = (state) => {
+  return {
+    activities: state.manageActivities.activities,
+    categories: state.manageCategories.categories
+  }
+}
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ addModels }, dispatch);
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App);

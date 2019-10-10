@@ -8,7 +8,8 @@ class ActivityFormComponent extends Component {
     name: "",
     address: "",
     description: "",
-    categories_attributes: []
+    category_id: "",
+    // categories_attributes: []
     // category_ids: []
   };
 
@@ -30,16 +31,21 @@ class ActivityFormComponent extends Component {
       description: event.target.value
     });
   };
-
   handleCategoryChange = event => {
     event.preventDefault();
     this.setState({
-      categories_attributes: [
-        ...this.state.categories_attributes,
-        { title: event.target.value }
-      ]
-    });
-  };
+      category_id: event.target.value
+    })
+}
+  // handleCategoryChange = event => {
+  //   event.preventDefault();
+  //   this.setState({
+  //     categories_attributes: [
+  //       ...this.state.categories_attributes,
+  //       { title: event.target.value }
+  //     ]
+  //   });
+  // };
 
   handleOnSubmit = event => {
     event.preventDefault();
@@ -48,7 +54,8 @@ class ActivityFormComponent extends Component {
       name: "",
       address: "",
       description: "",
-      categories_attributes: []
+      category_id: ""
+      // categories_attributes: []
       //   categories_ids: []
     });
   };
@@ -56,7 +63,7 @@ class ActivityFormComponent extends Component {
     const categories = this.props.categories || [];
     return categories.map((category, idx) => {
       return (
-        <option key={idx} value={category.title}>
+        <option key={idx} value={category.id}>
           {category.title}
         </option>
       );
@@ -94,15 +101,12 @@ class ActivityFormComponent extends Component {
     );
   }
 }
-const mapStateToProps = state => {
-  return {
-    categories: state.categories
-  };
-};
-function mapDispatchToProps(dispatch) {
+
+const mapDispatchToProps = (dispatch)=> {
   return bindActionCreators({ addActivity }, dispatch);
 }
+
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ActivityFormComponent);

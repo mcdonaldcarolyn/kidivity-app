@@ -48,8 +48,9 @@ export class HomePageComponent extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  categories: state.categories
-});
+const mapStateToProps = state => {
+  
+  return  { categories: state.manageCategories.categories }
+};
 
 export default connect(mapStateToProps)(HomePageComponent);
