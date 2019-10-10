@@ -47,7 +47,7 @@ export class CategoryPageComponent extends Component {
 }
 const mapStateToProps = state => ({
   activities: state.activities,
-  categories: state.categories
+  categories: state.manageCategories.categories
 });
 
 export default connect(mapStateToProps)(CategoryPageComponent);
