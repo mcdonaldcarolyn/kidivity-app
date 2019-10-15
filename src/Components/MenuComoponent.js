@@ -36,9 +36,7 @@ export default class MenuComponent extends Component {
                 tweens and older
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+             
             </NavDropdown>
           </Nav>
           {/* <Form inline>
