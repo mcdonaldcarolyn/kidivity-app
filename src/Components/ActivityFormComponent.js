@@ -9,8 +9,6 @@ class ActivityFormComponent extends Component {
     address: "",
     description: "",
     category_id: "",
-    // categories_attributes: []
-    // category_ids: []
   };
 
   handleNameChange = event => {
@@ -37,15 +35,7 @@ class ActivityFormComponent extends Component {
       category_id: event.target.value
     })
 }
-  // handleCategoryChange = event => {
-  //   event.preventDefault();
-  //   this.setState({
-  //     categories_attributes: [
-  //       ...this.state.categories_attributes,
-  //       { title: event.target.value }
-  //     ]
-  //   });
-  // };
+  
 
   handleOnSubmit = event => {
     event.preventDefault();
@@ -55,9 +45,7 @@ class ActivityFormComponent extends Component {
       address: "",
       description: "",
       category_id: ""
-      // categories_attributes: []
-      //   categories_ids: []
-    });
+      });
   };
   renderCategories() {
     const categories = this.props.categories || [];
