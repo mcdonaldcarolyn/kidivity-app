@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ActivityFormComponent from "../Components/ActivityFormComponent"
-import ActivityListComponent from '../Components/ActivityListComponent';
+import ActivityFormComponent from "../components/ActivityFormComponent"
+import ActivityListComponent from '../components/ActivityListComponent';
 import { addActivity } from "../actions/listActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";

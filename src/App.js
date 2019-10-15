@@ -3,7 +3,7 @@ import "./App.css";
 import React, { Component } from "react";
 import FormPageComponent from "./container/FormPageComponent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import MenuComponent from "./Components/MenuComoponent";
+import MenuComponent from "./components/MenuComoponent";
 import HomePageComponent from "./container/HomePageComponent";
 import CategoryPageComponent from "./container/CategoryPageComponent";
 import ActivitiesPageComponent from "./container/ActivitiesPageComponent";
