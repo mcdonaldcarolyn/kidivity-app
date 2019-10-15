@@ -19,15 +19,7 @@ export class ActivityPageComponent extends Component {
     const activity =
       activities.find(activity => activity.id === activityId);
     const category = activity.category.title;
-    // const categories = this.props.categories || [];
-    // const category =
-    //     categories.find(category => {
-    //     return (
-    //       activity &&
-    //       activity.categories &&
-    //       activity.categories.find(cat => cat.id === category.id)
-    //     );
-    //   }) || {};
+    
     return (
       <div style={sectionStyle}>
         <h1>{activity.name}</h1>
