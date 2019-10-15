@@ -1,14 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { Component } from "react";
-import FormPageComponent from "./container/FormPageComponent";
+import FormPageComponent from "./containers/FormPageComponent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import MenuComponent from "./components/MenuComoponent";
-import HomePageComponent from "./container/HomePageComponent";
-import CategoryPageComponent from "./container/CategoryPageComponent";
-import ActivitiesPageComponent from "./container/ActivitiesPageComponent";
-import CategoriesPageComponent from "./container/CategoriesPageComponent";
-import ActivityPageComponent from "./container/ActivityPageComponent";
+import HomePageComponent from "./containers/HomePageComponent";
+import CategoryPageComponent from "./containers/CategoryPageComponent";
+import ActivitiesPageComponent from "./containers/ActivitiesPageComponent";
+import CategoriesPageComponent from "./containers/CategoriesPageComponent";
+import ActivityPageComponent from "./containers/ActivityPageComponent";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
