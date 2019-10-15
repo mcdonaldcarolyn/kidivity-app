@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { addActivity } from "../actions/listActions";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+
 
 class ActivityFormComponent extends Component {
   state = {
@@ -94,7 +92,4 @@ class ActivityFormComponent extends Component {
 //   return bindActionCreators({ addActivity }, dispatch);
 // }
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(ActivityFormComponent);
+export default (ActivityFormComponent);

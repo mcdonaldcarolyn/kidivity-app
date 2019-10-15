@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ActivityListComponent from '../Components/ActivityListComponent';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 export class ActivitiesPageComponent extends Component {
     render() {
        

@@ -40,7 +40,7 @@ const mapStateToProps = (state) => {
     categories: state.manageCategories.categories
   }
 }
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return bindActionCreators({ addModels }, dispatch);
 }
 

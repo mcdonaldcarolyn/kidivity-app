@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import ActivityFormComponent from "../Components/ActivityFormComponent"
 import ActivityListComponent from '../Components/ActivityListComponent';
+import { addActivity } from "../actions/listActions";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
 
 export class FormPageComponent extends Component {
 
@@ -25,7 +28,7 @@ export class FormPageComponent extends Component {
             <div style={sectionStyle}>
                 <ActivityListComponent category={id} activities={this.props.activities}/>
                 <hr></hr>
-                <ActivityFormComponent addActivity={this.addActivity} categories={this.props.categories}/>
+                <ActivityFormComponent addActivity={this.props.addActivity} categories={this.props.categories}/>
                 <a href="/"> Back to Home </a>
             </div>
         )
@@ -39,7 +42,7 @@ const mapStateToProps = state => {
     }
 };
 
-const mapDispatchToProps= dispatch => {
+const mapDispatchToProps = dispatch => {
   return bindActionCreators({ addActivity }, dispatch);
 }
 
