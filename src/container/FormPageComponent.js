@@ -12,7 +12,7 @@ export class FormPageComponent extends Component {
     render() {
         const sectionStyle = {
             backgroundImage:
-                "url(https://images.unsplash.com/photo-1487251918058-8c9ee71607dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
+                "url(https://images.unsplash.com/photo-1471644865643-fe726490270a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -39,10 +39,10 @@ const mapStateToProps = state => {
     }
 };
 
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ addActivity }, dispatch);
-// }
+const mapDispatchToProps= dispatch => {
+  return bindActionCreators({ addActivity }, dispatch);
+}
 
 export default connect(
-  mapStateToProps
+  mapStateToProps, mapDispatchToProps
 )(FormPageComponent);
