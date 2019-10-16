@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CategoryListComponent from "../blah/CategoryListComponent";
+import CategoryListComponent from "../component/CategoryListComponent";
 import { connect } from "react-redux";
 
 export class HomePageComponent extends Component {
