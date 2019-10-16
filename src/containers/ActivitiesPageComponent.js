@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ActivityListComponent from '../component/ActivityListComponent';
+import ActivityListComponent from '../components/ActivityListComponent';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 

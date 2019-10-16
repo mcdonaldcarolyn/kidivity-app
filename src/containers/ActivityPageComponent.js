@@ -15,10 +15,10 @@ export class ActivityPageComponent extends Component {
     };
     const { id } = this.props.match.params;
     const activityId = parseInt(id, 10);
-    const activities = this.props.activities;
+    const activities = this.props.activities || [];
     const activity =
-      activities.find(activity => activity.id === activityId);
-    const category = activity.category.title;
+      activities.find(activity => activity.id === activityId) || {};
+    const category = activity.category || {};
     
     return (
       <div style={sectionStyle}>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ActivityFormComponent from "../component/ActivityFormComponent"
-import ActivityListComponent from '../component/ActivityListComponent';
+import ActivityFormComponent from "../components/ActivityFormComponent"
+import ActivityListComponent from '../components/ActivityListComponent';
 import { addActivity } from "../actions/listActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -15,7 +15,7 @@ export class FormPageComponent extends Component {
     render() {
         const sectionStyle = {
             backgroundImage:
-                "url(https://images.unsplash.com/photo-1471644865643-fe726490270a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
+                "url(https://images.unsplash.com/photo-1562016600-ece13e8ba570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
