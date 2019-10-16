@@ -17,8 +17,8 @@ export class CategoryPageComponent extends Component {
     
     const id = parseInt(this.props.match.params.id, 10);
     const categories = this.props.categories || [];
-    const category = categories.find(cat => cat.id === id);
-    const activitiesForCategory = this.props.activities.map(activity => activity.category_id === category.id) || [];
+    const category = categories.find(cat => cat.id === id) || {};
+    const activitiesForCategory = (this.props.activities || []).filter(activity => activity.category.id === category.id).map(activity => <div>{activity.name}</div>);
 
     if (!category) {
       return <div></div>;
