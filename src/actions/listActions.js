@@ -1,4 +1,4 @@
-import {loadCategories} from './categoryActions'
+import { loadCategories } from "./categoryActions";
 export const ADD_ACTIVITY_SUCCESS = "ADD_ACTIVITY_SUCCESS";
 export const ADD_ACTIVITY_ERROR = "ADD_ACTIVITY_ERROR";
 
@@ -6,12 +6,11 @@ export const FETCH_ACTIVITIES_START = "FETCH_ACTIVITIES_START";
 export const FETCH_ACTIVITIES_SUCCESS = "FETCH_ACTIVITIES_SUCCESS";
 export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 
-
 export function addModels() {
-  return function (dispatch) {
+  return function(dispatch) {
     loadActivities()(dispatch);
     loadCategories()(dispatch);
-  }  
+  };
 }
 
 export function loadActivities() {
@@ -24,7 +23,6 @@ export function loadActivities() {
           type: FETCH_ACTIVITIES_SUCCESS,
           activities
         });
-        
       })
       .catch(error => {
         dispatch({
@@ -35,10 +33,8 @@ export function loadActivities() {
   };
 }
 
-
 export function addActivity(activity) {
   return function(dispatch) {
-    
     const body = JSON.stringify({ activity });
     const headers = {
       "Content-Type": "application/json"
@@ -79,5 +75,3 @@ export function fetchActivitiesSuccess(activities) {
     activities
   };
 }
-
-

@@ -1,12 +1,11 @@
-import React, { Component } from "./node_modules/react";
-
+import React, { Component } from "react";
 
 class ActivityFormComponent extends Component {
   state = {
     name: "",
     address: "",
     description: "",
-    category_id: "",
+    category_id: ""
   };
 
   handleNameChange = event => {
@@ -31,9 +30,8 @@ class ActivityFormComponent extends Component {
     event.preventDefault();
     this.setState({
       category_id: event.target.value
-    })
-}
-  
+    });
+  };
 
   handleOnSubmit = event => {
     event.preventDefault();
@@ -43,7 +41,7 @@ class ActivityFormComponent extends Component {
       address: "",
       description: "",
       category_id: ""
-      });
+    });
   };
   renderCategories() {
     const categories = this.props.categories || [];
@@ -92,4 +90,4 @@ class ActivityFormComponent extends Component {
 //   return bindActionCreators({ addActivity }, dispatch);
 // }
 
-export default (ActivityFormComponent);
+export default ActivityFormComponent;
