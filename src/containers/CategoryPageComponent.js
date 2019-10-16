@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ActivityListComponent from "../components/ActivityListComponent";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -30,7 +29,6 @@ export class CategoryPageComponent extends Component {
         <h1> Activities for {category.title}</h1>
         <div>
           {activitiesForCategory}
-          {/* <ActivityListComponent activities={this.props.activities} /> */}
         </div>
         <br />
         <div>
