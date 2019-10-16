@@ -5,7 +5,7 @@ import { categories } from "../data/categories";
 export default class MenuComponent extends Component {
   renderCategories() {
     return categories.map((category, idx) => {
-      const url = "/categories/" + category.slug;
+      const url = "/categories/" + category.id;
       return (
         <NavDropdown.Item key={idx} href={url}>
           {category.name}
