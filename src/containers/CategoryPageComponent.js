@@ -14,9 +14,7 @@ export class CategoryPageComponent extends Component {
       height: "700px",
       width: "1500px"
     };
-    const linkColor = {
-      color: "black"
-    };
+    
     const id = parseInt(this.props.match.params.id, 10);
     const categories = this.props.categories || [];
     const category = categories.find(cat => cat.id === id);
@@ -30,12 +28,12 @@ export class CategoryPageComponent extends Component {
       <div style={sectionStyle}>
         <br />
         <h1> Activities for {category.title}</h1>
-        <div style={linkColor}>
+        <div>
           <ActivityListComponent activities={this.props.activities} />
         </div>
         <br />
-        <div style={linkColor}>
-          <Link to="/activities-new" style={linkColor}>
+        <div>
+          <Link to="/activities-new" className="App-link">
             Add new
           </Link>
         </div>
