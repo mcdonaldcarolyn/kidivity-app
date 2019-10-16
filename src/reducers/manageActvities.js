@@ -9,7 +9,7 @@ export default function manageActivities(state = initialState, action) {
     case "ADD_ACTIVITY_SUCCESS":
       return {
         ...state,
-        activities: [...state.activities, action.activity, action.activity]
+        activities: [...state.activities, action.activity]
       };
     case "FETCH_ACTIVITIES_SUCCESS":
       return {

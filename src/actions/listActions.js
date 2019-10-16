@@ -39,7 +39,7 @@ export function addActivity(activity) {
     const headers = {
       "Content-Type": "application/json"
     };
-    fetch("http://localhost:3001/activities", { method: "POST", body, headers })
+    fetch("/activities", { method: "POST", body, headers })
       .then(resp => resp.json())
       .then(activity => {
         dispatch(addActivitySuccess(activity));
