@@ -3,7 +3,7 @@ import "./App.css";
 import React, { Component } from "react";
 import FormPageComponent from "./containers/FormPageComponent";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import MenuComponent from "./components/MenuComoponent";
+import MenuComponent from "./components/MenuComponent";
 import HomePageComponent from "./containers/HomePageComponent";
 import CategoryPageComponent from "./containers/CategoryPageComponent";
 import ActivitiesPageComponent from "./containers/ActivitiesPageComponent";
@@ -21,28 +21,37 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <MenuComponent />
+        <MenuComponent categories={this.props.categories} />
         <Router>
           <Route exact path="/" component={HomePageComponent} />
           <Route exact path="/categories" component={CategoriesPageComponent} />
           <Route path="/categories/:id" component={CategoryPageComponent} />
           <Route exact path="/activities" component={ActivitiesPageComponent} />
           <Route exact path="/activities-new" component={FormPageComponent} />
-          <Route path="/activities/:id" render={(routerProps) => <ActivityPageComponent {...routerProps} activities={this.props.activities} categories={this.props.categories}/>}/>
+          <Route
+            path="/activities/:id"
+            render={routerProps => (
+              <ActivityPageComponent
+                {...routerProps}
+                activities={this.props.activities}
+                categories={this.props.categories}
+              />
+            )}
+          />
         </Router>
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     activities: state.manageActivities.activities,
     categories: state.manageCategories.categories
-  }
-}
+  };
+};
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({ addModels }, dispatch);
-}
+};
 
 export default connect(
   mapStateToProps,

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { categories } from "../data/categories";
 
 export default class MenuComponent extends Component {
+  
   renderCategories() {
+    const categories = this.props.categories || [];
     return categories.map((category, idx) => {
       const url = "/categories/" + category.id;
       return (
