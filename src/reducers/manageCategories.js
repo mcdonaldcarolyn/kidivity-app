@@ -2,7 +2,7 @@ export const initialState = {
     categories: []
 };
 export default function manageCategories(state = initialState, action) {
-    
+    console.log(9)
     switch (action.type) {
         case "ADD_CATEGORY_SUCCESS":
             return {

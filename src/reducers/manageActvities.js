@@ -4,8 +4,9 @@ export const initialState = {
 };
 
 export default function manageActivities(state = initialState, action) {
-  
+  console.log(8)
   switch (action.type) {
+    
     case "ADD_ACTIVITY_SUCCESS":
       return {
         ...state,

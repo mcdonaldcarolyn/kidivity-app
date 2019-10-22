@@ -9,7 +9,8 @@ export function loadCategories() {
     dispatch({ type: FETCH_CATEGORIES_START });
     fetch("/categories")
       .then(resp => resp.json())
-      .then(categories => {
+        .then(categories => {
+            console.log(7)
         dispatch({
           type: FETCH_CATEGORIES_SUCCESS,
           categories

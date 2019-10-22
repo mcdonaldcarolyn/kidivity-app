@@ -15,10 +15,13 @@ import { connect } from "react-redux";
 import { addModels } from "./actions/listActions";
 export class App extends Component {
   componentDidMount() {
+    console.log(3)
     this.props.addModels();
+    
   }
 
   render() {
+    console.log(2)
     return (
       <div>
         <MenuComponent categories={this.props.categories} />

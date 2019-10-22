@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 export class CategoryPageComponent extends Component {
   render() {
+    console.log(1)
     const sectionStyle = {
       backgroundImage:
         "url(https://images.unsplash.com/photo-1569271836752-ed9351b75521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
