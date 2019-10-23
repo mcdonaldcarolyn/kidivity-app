@@ -1,8 +1,17 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-
+import ActivityFormComponent from "../components/ActivityFormComponent";
+import { addActivity } from "../actions/listActions";
 export class CategoryPageComponent extends Component {
+  handleClick = event => {
+    event.preventDefault()
+    let grabDiv = document.getElementsByClassName("activityForm")[0].style.display = "block"
+    
+    // hiddenStyle = {display:"block"}
+  
+  }
+   
   render() {
     console.log(1)
     const sectionStyle = {
@@ -14,6 +23,9 @@ export class CategoryPageComponent extends Component {
       height: "700px",
       width: "1500px"
     };
+  // let hiddenStyle = {
+  //     display:"none"
+  //   }
 
     const id = parseInt(this.props.match.params.id, 10);
     const categories = this.props.categories || [];
@@ -24,7 +36,7 @@ export class CategoryPageComponent extends Component {
         const url = "/activities/" + activity.id;
         return (
           <li>
-            <Link to={url} className="App-link">
+            <Link to={url} className="App-link" onCLick>
               {activity.name}
             </Link>
           </li>
@@ -42,9 +54,14 @@ export class CategoryPageComponent extends Component {
         <ul>{activitiesForCategory}</ul>
         <br />
         <div>
-          <Link to="/activities-new" className="App-link">
+          {/* <Link to="/activities-new" className="App-link">
             Add new
-          </Link>
+          </Link> */}
+          
+          <a href="#" onClick={this.handleClick}>add new activity</a>
+          <div className="activityForm" style={{display: "none"}}>
+          <ActivityFormComponent addActivity={this.props.addActivity} categories={this.props.categories} />
+          </div>
         </div>
       </div>
     );
@@ -55,4 +72,4 @@ const mapStateToProps = state => ({
   categories: state.manageCategories.categories
 });
 
-export default connect(mapStateToProps)(CategoryPageComponent);
+export default connect(mapStateToProps, {addActivity})(CategoryPageComponent);
