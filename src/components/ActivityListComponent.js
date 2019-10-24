@@ -23,10 +23,6 @@ export default class ActivityListComponent extends Component{
         return(
             <ul>
                 {this.renderActivities()}
-                <label class="switch">
-                    <input type="checkbox"/>
-                    <span class="slider"></span>
-                </label>
             </ul>
         );
     }
