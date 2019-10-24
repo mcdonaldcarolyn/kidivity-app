@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
 export default class ActivityListComponent extends Component{
-    state = {
-        disabledUpVote: false,
-        disablesDownVote: false
-   }
+    
     renderActivities = () => {
         
         return this.props.activities.map((activity, idx) => {
