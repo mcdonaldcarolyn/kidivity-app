@@ -7,7 +7,6 @@ export const FETCH_ACTIVITIES_SUCCESS = "FETCH_ACTIVITIES_SUCCESS";
 export const FETCH_ACTIVITIES_ERROR = "FETCH_ACTIVITIES_ERROR";
 
 export function addModels() {
-  console.log(4)
   return function(dispatch) {
     loadActivities()(dispatch);
     loadCategories()(dispatch);
@@ -15,13 +14,11 @@ export function addModels() {
 }
 
 export function loadActivities() {
-  console.log(5)
   return function(dispatch) {
     dispatch({ type: FETCH_ACTIVITIES_START });
     fetch("/activities")
       .then(resp => resp.json())
       .then(activities => {
-        console.log(6)
         dispatch({
           type: FETCH_ACTIVITIES_SUCCESS,
           activities
