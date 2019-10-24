@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 
 export class CategoryPageComponent extends Component {
   render() {
-    console.log(1)
     const sectionStyle = {
       backgroundImage:
         "url(https://images.unsplash.com/photo-1569271836752-ed9351b75521?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)",
@@ -20,20 +19,17 @@ export class CategoryPageComponent extends Component {
     const category = categories.find(cat => cat.id === id) || {};
     const activitiesForCategory = (this.props.activities || [])
       .filter(activity => activity.category.id === category.id)
-      .map(activity => {
+      .map((activity, idx) => {
         const url = "/activities/" + activity.id;
         return (
-          <li>
+          <li key={idx}>
             <Link to={url} className="App-link">
               {activity.name}
             </Link>
           </li>
         );
       });
-    // const url = '/activities/' + activitiesForCategory.id;
-    // const url = this.props.activitiesForCategory.map((idx, activity) => {
-    //   const link = "/activities/" + activity.id;
-    // });
+
 
     return (
       <div style={sectionStyle}>
