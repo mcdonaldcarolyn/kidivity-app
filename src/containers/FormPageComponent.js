@@ -8,9 +8,7 @@ import { bindActionCreators } from "redux";
 
 export class FormPageComponent extends Component {
 
-    addActivity = activity => {
-        this.props.addActivity(activity);
-    };
+    
 
     render() {
         const sectionStyle = {

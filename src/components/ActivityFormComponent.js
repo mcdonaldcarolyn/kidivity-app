@@ -89,8 +89,6 @@ class ActivityFormComponent extends Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch)=> {
-//   return bindActionCreators({ addActivity }, dispatch);
-// }
+
 
 export default ActivityFormComponent;
